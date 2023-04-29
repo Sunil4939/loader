@@ -8,10 +8,12 @@ const RoundedButton = ({
     width,
     backgroundColor,
     textColor,
+    disabled,
     onPress }) => {
     return (
         <TouchableOpacity
             style={[styles.btn, style,{backgroundColor: backgroundColor, width: width}]}
+           disabled={disabled}
             onPress={onPress}
         >
             <Text
@@ -29,7 +31,8 @@ RoundedButton.defaultProps = {
     backgroundColor: COLORS.primary,
     width: SIZES.width * .9,
     children: null,
-    onPress: null
+    onPress: null,
+    disabled: false,
 }
 
 export default RoundedButton;

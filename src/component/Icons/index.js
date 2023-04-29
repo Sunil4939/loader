@@ -73,9 +73,20 @@ const Icons = ({ name, color, size, style }) => {
                 style={[{ tintColor: color, height: size, width: size }, style]}
                 resizeMode='contain'
             />
+            case 'menu':
+                return <Image source={icons.menu}
+                    style={[{ tintColor: color, height: size, width: size }, style]}
+                    resizeMode='contain'
+                />
 
 
         // icons
+        case 'upload':
+            return <Ionicons style={StyleSheet.create(style)} name="cloud-upload-outline" size={size} color={color} />
+        case 'call':
+            return <Ionicons style={StyleSheet.create(style)} name="ios-call" size={size} color={color} />
+        case 'star':
+            return <FontAwesome style={StyleSheet.create(style)} name="star" size={size} color={color} />
         case 'search1':
             return <Ionicons style={StyleSheet.create(style)} name="md-search-sharp" size={size} color={color} />
         case 'closecircle':
@@ -114,7 +125,8 @@ const Icons = ({ name, color, size, style }) => {
             return <AntDesign style={StyleSheet.create(style)} name="pluscircle" size={size} color={color} />
         case 'star-outline':
             return <AntDesign style={StyleSheet.create(style)} name="staro" size={size} color={color} />
-
+            case 'download':
+                return <MaterialCommunityIcons style={StyleSheet.create(style)} name="download" size={size} color={color} />
 
         default:
             return <MaterialIcons style={StyleSheet.create(style)} name="logout" size={size} color={color} />

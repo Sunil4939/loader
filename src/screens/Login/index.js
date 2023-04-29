@@ -60,8 +60,9 @@ const Login = ({ navigation, LoginApi }) => {
                         </View>
                     </View>
                     <RoundedButton
-                        backgroundColor={"#BFBFC1"}
-                        textColor={"#707070"}
+                        backgroundColor={phone ? COLORS.primary :"#BFBFC1"}
+                        textColor={phone ? COLORS.white : "#707070"}
+                        disabled={phone ? false : true}
                         onPress={() => navigation.navigate("Otp")}
                     >
                         Login

@@ -20,6 +20,10 @@ const placeholder = require("../assets/icons/placeholder.png")
 const calendar = require("../assets/icons/calendar.png")
 const vehicle = require("../assets/icons/vehicle.png")
 const calendar1 = require("../assets/icons/calendar1.png")
+const user = require("../assets/icons/user.png")
+const clock1 = require("../assets/icons/clock1.png")
+const truck = require("../assets/icons/truck.png")
+const menu = require("../assets/icons/menu.png")
 
 export default {
     back,
@@ -42,4 +46,8 @@ export default {
     calendar,
     vehicle,
     calendar1,
+    user,
+    clock1,
+    truck,
+    menu,
 }

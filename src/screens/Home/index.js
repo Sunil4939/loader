@@ -1,5 +1,5 @@
 import React, { useEffect, useState, } from "react";
-import { View, Text, Image, TextInput, TouchableOpacity, StatusBar, FlatList } from "react-native";
+import { View, Text, Image, TextInput, TouchableOpacity, StatusBar, FlatList, PermissionsAndroid } from "react-native";
 import { COLORS, SIZES, dummyData, icons, images } from "../../constants";
 import styles from "./styles";
 import Icons from "../../component/Icons";
@@ -7,8 +7,9 @@ import EarningCard from "../../component/Cards/EarningCard";
 
 
 const Home = ({ navigation, route }) => {
+  
 
-    return (
+       return (
         <View style={styles.container}>
             <StatusBar backgroundColor={COLORS.primary} barStyle="light-content" />
 
@@ -30,17 +31,22 @@ const Home = ({ navigation, route }) => {
                         // type={item.type}
                         mode={item.mode}
                         time={item.time}
+                        onPress={() => navigation.navigate("Fleet")}
                     />
 
                 ))}
             </View>
-            <TouchableOpacity style={styles.btn}>
+            <TouchableOpacity style={styles.btn}
+                onPress={() => navigation.navigate("AddPost")}
+            >
                 <Text style={styles.btn_text}>ADD NEW DRIVER</Text>
                 <Icons name={'right'} size={25} color={COLORS.black} />
             </TouchableOpacity>
             <View style={styles.hr_line} />
 
-            <TouchableOpacity style={styles.btn}>
+            <TouchableOpacity style={styles.btn}
+                onPress={() => navigation.navigate("AddVehicle")}
+            >
                 <Text style={styles.btn_text}>ADD NEW Car</Text>
                 <Icons name={'right'} size={25} color={COLORS.black} />
             </TouchableOpacity>

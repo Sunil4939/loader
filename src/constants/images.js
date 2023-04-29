@@ -23,6 +23,11 @@ const truck = require('../assets/images/truck.png')
 const driver = require('../assets/images/driver.png')
 const emogy = require('../assets/images/emogy.png')
 const delivery5 = require('../assets/images/delivery5.png')
+const camera = require('../assets/images/camera.png')
+const adhar = require('../assets/images/adhar.png')
+const car = require("../assets/images/car.png")
+const driver1 = require("../assets/images/driver1.png")
+
 
 export default {
     notFound,
@@ -47,5 +52,9 @@ export default {
     truck,
     details,
     logo1,
-    delivery5
+    delivery5,
+    camera,
+    adhar,
+    car,
+    driver1,
 }

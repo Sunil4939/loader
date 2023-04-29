@@ -176,9 +176,131 @@ const RangeData = [
 
 ]
 
+const DriverData = [
+    {
+        id: 1,
+        image: images.profile,
+        name: "Sunil kumar Singh",
+        rating: 3.5,
+        way: "OFF ROAD"
+    },
+    {
+        id: 2,
+        image: images.profile,
+        name: "Sunil kumar Singh",
+        rating: 3.5,
+        way: "ON ROAD"
+    },
+    {
+        id: 3,
+        image: images.profile,
+        name: "Sunil kumar Singh",
+        rating: 3.5,
+        way: "OFF ROAD"
+    },
+    {
+        id: 4,
+        image: images.profile,
+        name: "Sunil kumar Singh",
+        rating: 3.5,
+        way: "ON ROAD"
+    },
+    {
+        id: 5,
+        image: images.profile,
+        name: "Sunil kumar Singh",
+        rating: 3.5,
+        way: "ON ROAD"
+    },
+    {
+        id: 6,
+        image: images.profile,
+        name: "Sunil kumar Singh",
+        rating: 3.5,
+        way: "ON ROAD"
+    },
+]
+
+const CarData = [
+    {
+        id: 1,
+        image: images.order,
+        carNO: "Tata Ace - MP-09-LP-8109",
+        name: "Pranshant Kumar",
+        location: 'Bhopal M.p',
+    },
+    {
+        id: 2,
+        image: images.order,
+        carNO: "Tata Ace - MP-09-LP-8109",
+        name: "Pranshant Kumar",
+        location: 'Bhopal M.p',
+    },
+]
+
+const CategoryData = [
+    {
+        id: 1,
+        image: images.car,
+        category: "Local Rental"
+    },
+    {
+        id: 2,
+        image: images.car,
+        category: "Local Rental"
+    },
+    {
+        id: 3,
+        image: images.car,
+        category: "Local Rental"
+    },
+    {
+        id: 4,
+        image: images.car,
+        category: "Local Rental"
+    },
+]
+
+const PayoutData = [
+    {
+        id: 1,
+        date: "2018-11-11",
+        earning: "₹10223.34",
+        payout: "",
+    },
+    {
+        id: 2,
+        date: "2018-11-11",
+        earning: "₹10223.34",
+        payout: "₹1923.93",
+    },
+    {
+        id: 3,
+        date: "2018-11-11",
+        earning: "₹10223.34",
+        payout: "₹1923.93",
+    },
+    {
+        id: 4,
+        date: "2018-11-11",
+        earning: "₹10223.34",
+        payout: "₹1923.93",
+    },
+    {
+        id: 5,
+        date: "2018-11-11",
+        earning: "₹10223.34",
+        payout: "₹1923.93",
+    },
+]
+
 export default {
     GoodsType,
     NotificationData,
     EarningData,
     RangeData,
+    DriverData,
+    CategoryData,
+    PayoutData,
+    CarData,
 }

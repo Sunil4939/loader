@@ -3,7 +3,7 @@ import React from 'react'
 import { COLORS, FONTS, SIZES } from '../../constants'
 import Icons from '../Icons'
 
-const HeaderLeft = ({ navigation }) => {
+const HeaderLeft = ({ navigation, color }) => {
     return (
       <TouchableOpacity style={styles.backBtn}
         onPress={() => navigation.goBack()}
@@ -11,10 +11,14 @@ const HeaderLeft = ({ navigation }) => {
         <Icons
           name={"back"}
           size={25}
-          color={COLORS.black}
+          color={color}
         />
       </TouchableOpacity>
     )
+  }
+
+  HeaderLeft.defaultProps = {
+   color: COLORS.black,
   }
 
 export default HeaderLeft;

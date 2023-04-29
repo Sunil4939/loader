@@ -17,6 +17,13 @@ export default StyleSheet.create({
         marginBottom: -6,
     },
 
+    headerTitle2: {
+        fontFamily: FONTS.medium,
+        fontSize: 17,
+        color: COLORS.white,
+        marginBottom: -6,
+    },
+
     headerTitle1: {
         fontFamily: FONTS.medium,
         fontSize: 17,

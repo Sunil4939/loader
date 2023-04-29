@@ -7,12 +7,22 @@ import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import Home from '../../screens/Home';
 import Icons from '../../component/Icons';
 import HeaderLeft from '../../component/HeaderLeft';
-import Notification from '../../screens/Notification';
 import MyAccount from '../../screens/MyAccount';
 import EditProfile from '../../screens/EditProfile';
 import AboutUs from '../../screens/AboutUs';
 import TermsAndCondition from '../../screens/TermsAndCondition';
 import PrivacyPolicy from '../../screens/PrivacyPolicy';
+import AddPost from '../../screens/AddPost';
+import UploadDocument from '../../screens/UploadDocument';
+import RapidoManager from '../../screens/RapidoManager';
+import Fleet from '../../screens/Fleet';
+import Location from '../../screens/Location';
+import OrderDetails from '../../screens/OrderDetails';
+import Earning from '../../screens/Earning';
+import AddDriver from '../../screens/AddDriver';
+import AddVehicle from '../../screens/AddVehicle';
+import VehicleRegistration from '../../screens/VehicleRegistration';
+import UploadDetails from '../../screens/UploadDetails';
 
 const Stack = createStackNavigator();
 
@@ -94,7 +104,8 @@ const HomeStack = ({ navigation, route, cart }) => {
             <Image source={images.logo1} style={styles.logo1} resizeMode='contain' />
           ),
           headerRight: () => (
-            <TouchableOpacity style={{...styles.drawer_btn, marginLeft: 0, marginRight: SIZES.width * .02,}}
+            <TouchableOpacity style={{ ...styles.drawer_btn, marginLeft: 0, marginRight: SIZES.width * .02, }}
+              onPress={() => navigation.navigate("RapidoManager")}
             >
               <Icons
                 name={"calendar1"}
@@ -105,7 +116,73 @@ const HomeStack = ({ navigation, route, cart }) => {
           ),
         })}
       />
-    
+      <Stack.Screen name="Fleet" component={Fleet}
+        options={({ navigation }) => ({
+          headerStyle: styles.headerStyle,
+          headerLeft: () => (
+            <TouchableOpacity style={styles.drawer_btn}
+              onPress={() => navigation.toggleDrawer()}
+            >
+              <Icons
+                name={"menu"}
+                size={30}
+                color={COLORS.black}
+              />
+            </TouchableOpacity>
+          ),
+          headerTitleAlign: 'center',
+          headerTitle: "Fleet",
+        })}
+      />
+      <Stack.Screen name="RapidoManager" component={RapidoManager}
+        options={({ navigation }) => ({
+          headerStyle: styles.headerStyle1,
+          headerLeft: () => (
+            <TouchableOpacity style={styles.drawer_btn}
+              onPress={() => navigation.toggleDrawer()}
+            >
+              <Icons
+                name={"menu"}
+                size={30}
+                color={COLORS.white}
+              />
+            </TouchableOpacity>
+          ),
+          headerTitleAlign: 'center',
+          headerTitle: "Rapido Manager",
+          headerTitleStyle: styles.headerTitle2,
+        })}
+      />
+      <Stack.Screen name="UploadDocument" component={UploadDocument}
+        options={({ navigation }) => ({
+          headerStyle: styles.headerStyle1,
+          headerTitleStyle:{ ...styles.headerTitle2, marginLeft: SIZES.width * -.05 },
+          headerTitle: "Upload Documents",
+          headerLeft: () => (
+            <HeaderLeft navigation={navigation} color={COLORS.white} />
+          ),
+        })}
+      />
+      <Stack.Screen name="UploadDetails" component={UploadDetails}
+        options={({ navigation }) => ({
+          headerStyle: styles.headerStyle1,
+          headerTitleStyle:{ ...styles.headerTitle2, marginLeft: SIZES.width * -.05 },
+          headerTitle: "Upload Details",
+          headerLeft: () => (
+            <HeaderLeft navigation={navigation} color={COLORS.white} />
+          ),
+        })}
+      />
+      <Stack.Screen name="AddPost" component={AddPost}
+        options={({ navigation }) => ({
+          headerStyle: styles.headerStyle,
+          headerTitleStyle: styles.headerTitle1,
+          headerTitle: "Add Post",
+          headerLeft: () => (
+            <HeaderLeft navigation={navigation} />
+          ),
+        })}
+      />
       <Stack.Screen name="MyAccount" component={MyAccount}
         options={({ navigation }) => ({
           headerStyle: styles.headerStyle,
@@ -154,6 +231,64 @@ const HomeStack = ({ navigation, route, cart }) => {
           headerLeft: () => (
             <HeaderLeft navigation={navigation} />
           ),
+        })}
+      />
+      <Stack.Screen name='OrderDetails' component={OrderDetails}
+        options={({ navigation }) => ({
+          headerStyle: styles.headerStyle,
+          headerTitleStyle: styles.headerTitle1,
+          headerTitle: "Delhivery - Domlur",
+          headerLeft: () => (
+            <HeaderLeft navigation={navigation} />
+          ),
+        })}
+      />
+      <Stack.Screen name='Location' component={Location}
+        options={() => ({
+          headerShown: false
+        })}
+      />
+      <Stack.Screen name="Earning" component={Earning}
+        options={({ navigation }) => ({
+          // headerShown: false,
+          headerStyle: styles.headerStyle1,
+          headerTitleStyle: { ...styles.headerTitle2, marginLeft: SIZES.width * -.05 },
+          headerTitle: "Rakesh Kumar",
+          headerLeft: () => (
+            <HeaderLeft navigation={navigation} color={COLORS.white} />
+          ),
+
+          headerRight: () => (
+            <TouchableOpacity style={{ ...styles.drawer_btn, marginLeft: 0, marginRight: SIZES.width * .02, }}
+            onPress={() => navigation.navigate("RapidoManager")}
+            >
+              <Icons
+                name={"calendar1"}
+                size={25}
+                color={COLORS.white}
+              />
+            </TouchableOpacity>
+          ),
+        })}
+      />
+      <Stack.Screen name='AddDriver' component={AddDriver}
+        options={({ navigation }) => ({
+          headerStyle: styles.headerStyle1,
+          headerTitleStyle: { ...styles.headerTitle2, marginLeft: SIZES.width * -.05 },
+          headerTitle: "Add Driver",
+          headerLeft: () => (
+            <HeaderLeft navigation={navigation} color={COLORS.white} />
+          ),
+        })}
+      />
+      <Stack.Screen name="AddVehicle" component={AddVehicle}
+        options={() => ({
+          headerShown: false,
+        })}
+      />
+      <Stack.Screen name="VehicleRegistration" component={VehicleRegistration}
+        options={() => ({
+          headerShown: false,
         })}
       />
     </Stack.Navigator>

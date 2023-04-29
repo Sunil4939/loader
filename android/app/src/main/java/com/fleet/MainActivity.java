@@ -4,6 +4,7 @@ package com.fleet;
 import android.os.Bundle;
 import org.devio.rn.splashscreen.SplashScreen;
 
+
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
@@ -24,6 +25,7 @@ public class MainActivity extends ReactActivity {
   protected String getMainComponentName() {
     return "Fleet";
   }
+
 
   /**
    * Returns the instance of the {@link ReactActivityDelegate}. There the RootView is created and

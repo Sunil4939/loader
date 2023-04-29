@@ -2,9 +2,11 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { COLORS, FONTS, SIZES } from '../../constants'
 
-const EarningCard = ({ source, name, mode, time, type, amount, text }) => {
+const EarningCard = ({ source, name, mode, time, type, amount, text, onPress }) => {
   return (
-    <TouchableOpacity style={styles.card}>
+    <TouchableOpacity style={styles.card}
+    onPress={onPress}
+    >
       {/* <View style={{alignItems: 'center'}}>
         <View style={styles.type_box}>
           <Text style={styles.type}>{type}</Text>
@@ -43,6 +45,7 @@ EarningCard.defaultProps = {
   type: "Driver",
   amount: "$10,000",
   text: "west Bombay 5th block,karachi ",
+  onPress: null,
 }
 
 export default EarningCard
